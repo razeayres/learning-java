@@ -4,7 +4,7 @@ public class LoopsTypes {
     public static void main(String[] args) {
         /* this starts the input
         scanner on console */
-        Scanner in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);    // "Scanner" is the template and "in" is the name of the object
 
         int choice; // <- this initialize the variable choice as integer
         
@@ -23,7 +23,7 @@ public class LoopsTypes {
             System.out.println("3. Cheeseburger");
             System.out.println("4. Veggie Burger");
             System.out.println("5. Nachos");
-            choice = in.nextInt();
+            choice = in.nextInt();  // this captures the input as int. If it is not int, it raises java.util.InputMismatchException
         } while (choice != 1 && choice != 2 && choice != 3 && choice != 4 && choice != 5);
         
         /*

@@ -1,3 +1,5 @@
+package basic_review;
+
 public class DataTypes {
     public static void main(String[] args) {
         // these are sample variables

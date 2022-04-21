@@ -1,3 +1,5 @@
+package basic_review;
+
 public class NumConversion {
     public static void main(String[] args) { // this programs receives external arguments
         int firstArg = 0; // this initializes the var firstArg as int

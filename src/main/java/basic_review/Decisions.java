@@ -1,3 +1,5 @@
+package basic_review;
+
 import java.util.Scanner;
 
 public class Decisions {

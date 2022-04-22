@@ -91,7 +91,7 @@ public class Employee implements Comparable {
                 return "Human Resources";
             case 002:
                 return "Staff";
-            case 003:
+            case 3: // these 00 are ignored
                 return "Faculty";
             default:    // <- if do not put this, it will say "missing return statement"
                 return "other";
@@ -118,11 +118,12 @@ public class Employee implements Comparable {
 
 //    this is a custom print method
     public void printEmployee() {
-        System.out.println(lastName + ", " + firstName +
+        System.out.println((("".equals(lastName)) ? "" : lastName + ", ") + // one-line if statement
+                           firstName +
                            "\nEmployeeID: " + this.employeeID +
                            "\nDepartment: " + get_DeptName(this.deptID));
         System.out.printf("Salary: $%8.2f", salary);
-        System.out.println(); // this prints a blank line
+        System.out.println("\n"); // this prints a blank line
     }
 
     /*

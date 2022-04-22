@@ -19,6 +19,7 @@ public class Employee implements Comparable {
     private int employeeID;
     private int deptID;
     private double salary;
+    private Address address;
 
     /*
     this a constructor.
@@ -31,7 +32,8 @@ public class Employee implements Comparable {
     the same name as the class ***
     */
     public Employee(String fname, String lname,     // this is analog to 'def __init__()'
-                    int employeeID, int deptID, double salary) {
+                    int employeeID, int deptID, double salary,
+                    Address address) {
         /*
         this is where the declared
         variables can be defined
@@ -48,11 +50,13 @@ public class Employee implements Comparable {
         this.employeeID = employeeID;   // 'this.' is analog to 'self.'
         this.deptID = deptID;
         this.salary = salary;
+        this.address = address;
     }
 
 //    this is an overloaded contructor used in case Employee has no last name
     public Employee(String fname,
-                    int employeeID, int deptID, double salary) {
+                    int employeeID, int deptID, double salary,
+                    Address address) {
         firstName = fname;
         /*
         this is used to assign
@@ -64,6 +68,7 @@ public class Employee implements Comparable {
         this.employeeID = employeeID;   // 'this.' is analog to 'self.'
         this.deptID = deptID;
         this.salary = salary;
+        this.address = address;
     }
 
 
@@ -73,10 +78,12 @@ public class Employee implements Comparable {
     to the fields
     */
 //    these are the get() methods
-    public String get_Name() { return firstName + "" + lastName; }
     public int get_employeeID() { return this.employeeID; }
     public int get_deptID() { return this.deptID; }
     public double get_salary() { return this.salary; }
+    public String get_Name() { 
+        return "".equals(lastName) ? firstName : firstName + " " + lastName + ", ";
+    }
     /*
     this one is also a get method,
     but it is different from the
@@ -123,7 +130,12 @@ public class Employee implements Comparable {
                            "\nEmployeeID: " + this.employeeID +
                            "\nDepartment: " + get_DeptName(this.deptID));
         System.out.printf("Salary: $%8.2f", salary);
-        System.out.println("\n"); // this prints a blank line
+        if (this.address == null) {
+            System.out.println("\nNo address found for this employee");
+        } else {
+            System.out.println("\nAddress: " + this.address.toString());
+        }
+        System.out.println(); // this prints a blank line
     }
 
     /*

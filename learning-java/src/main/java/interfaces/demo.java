@@ -1,5 +1,11 @@
 package interfaces;
 
+/*
+this class demo was created just
+show the program working with
+the class bike created using
+the itnerface bycicle
+*/
 public class demo {
     public static void main(String[] args) {
         bike Raze = new bike();

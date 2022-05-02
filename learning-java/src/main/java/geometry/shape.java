@@ -9,6 +9,13 @@ their own method to
 calculate their area
 */
 public abstract class shape {
+    /*
+    by being abstract, it cannot
+    be created directly, but it
+    can be used as superclass for
+    others to be inherited from
+    */
+
     private String shapeName;
     private double area;
 
@@ -40,4 +47,6 @@ public abstract class shape {
     their own calculateArea() method
     */
     public abstract double calculateArea();
+//    this is not necessary to exist just because the class is abstract
+//    it cannot hold implementation, it is just the header alone
 }

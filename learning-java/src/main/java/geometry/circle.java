@@ -17,6 +17,11 @@ public class circle extends shape { // shape becomes super in this class
         super(name);
     }
 
+    /*
+    this method is in both circle and square
+    but it acts differently, this is an example
+    of polymorphism being implemented
+    */
     public double calculateArea() {
         System.out.println("Enter the radius of the circle: ");
         double radius = in.nextDouble();

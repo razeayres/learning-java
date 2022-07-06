@@ -1,5 +1,7 @@
 package data_structures;
 
+import java.util.Arrays;
+
 public class arrays {
 //    syntax: type[] = new type[]
     public static void main(String[] args) {
@@ -28,6 +30,14 @@ public class arrays {
 //        these are arrays of boolean and characters
         boolean[] answers = {true, false, false, true, true};
         char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+
+        /*
+        this an example of using
+        Arrays.toString()
+        */
+        System.out.println("Before sorting: " + Arrays.toString(prices));
+        Arrays.sort(prices);
+        System.out.println("Before sorting: " + Arrays.toString(prices));
 
         /*
         this instantiates an array
